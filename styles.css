@@ -225,7 +225,11 @@ h1 {
             }
         }
         .social-links {
+            margin-top: 1.25rem;
+            margin-bottom: 0.625rem;
             a {
+                margin-right: 0.625rem;
+                margin-left: 0.625rem;
                 &:hover {
                     text-decoration: none;
                 }

@@ -179,7 +179,7 @@ h1 {
         display: block;
         font-weight: 100;
     }
-    @media (max-width: 64rem) {
+    @media (max-width: 90rem) {
         font-size: 3rem;
     }
 }
@@ -235,5 +235,38 @@ h1 {
                 }
             }
         }
+    }
+}
+
+.logos {
+    background-color: var(--base-100);
+    border-radius: 1.875rem;
+    padding: 1.875rem 0;
+    @media (max-width: 64rem) {
+        border-radius: 0;
+    }
+    .marquee {
+        width: 100vw;
+        max-width: 100%;
+        height: 8rem;
+        overflow: hidden;
+        position: relative;
+        .track {
+            position: absolute;
+            white-space: nowrap;
+            will-change: transform;
+            animation: marquee 40s linear infinite;
+            display: flex;
+            gap: 0.625rem;
+        }
+    }
+}
+
+@keyframes marquee {
+    0% {
+        transform: translate(0);
+    }
+    100% {
+        transform: translate(-50%);
     }
 }

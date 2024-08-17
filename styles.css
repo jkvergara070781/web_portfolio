@@ -270,3 +270,63 @@ h1 {
         transform: translate(-50%);
     }
 }
+
+h2 {
+    font-size: 4rem;
+    line-height: 1;
+    margin-bottom: 0.625rem;
+    text-align: center;
+    color: var(--base-800);
+    padding: 1.875rem;
+    small {
+        display: block;
+        font-weight: 100;
+        font-size: 0.5em;
+        color: var(--base-800)
+    }
+    @media (max-width: 64rem) {
+        font-size: 3rem;
+    }
+}
+
+h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1;
+    margin-bottom: 1.25rem;
+    color: var(--base-800);
+}
+
+.skills {
+    .holder-turquoise {
+        background-color: var(--turquoise-100);
+        border-radius: 1.875rem;
+        padding: 1.875rem;
+        display: flex;
+        @media (max-width: 64rem) {
+            flex-direction: column;
+        }
+        .left-column {
+            flex: 1;
+            ul {
+                list-style: none;
+                gap: 0.625rem;
+                margin-right: 6.25rem;
+                margin-bottom: 1.25rem;
+                li {
+                    display: inline-block;
+                    background-color: var(--turquoise-400);
+                    padding: 0.625rem 1.25rem;
+                    border-radius: 1rem;
+                    margin-bottom: 0.625rem;
+                }
+            }
+        }
+        .right-column {
+            flex: 1;
+            p {
+                margin-bottom: 1.25rem;
+            }
+        }
+    }
+}

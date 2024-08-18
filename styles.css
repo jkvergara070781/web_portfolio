@@ -25,7 +25,6 @@ body {
     font-optical-sizing: auto;
     font-style: normal;
     font-size: 1.25rem;
-    padding-bottom: 62.5rem;
 }
 
 a {
@@ -480,6 +479,102 @@ h3 {
                 @media (max-width: 64rem) {
                     grid-column: span 5;
                     grid-row: span 2;
+                }
+            }
+        }
+    }
+}
+
+.chatbot {
+    .chatbot-turquoise {
+        background-color: var(--turquoise-100);
+        border-radius: 1.875rem;
+        padding: 1.875rem;
+        gap: 1.875rem;
+        display: flex;
+        @media (max-width: 64rem) {
+            flex-direction: column;
+        }
+        p {
+            margin-bottom: 1.875rem;
+        }
+        .chat-info {
+            flex: 3;
+            padding-right: 1.875rem;
+        }
+        .chat-box {
+            flex: 4;
+            background: white;
+            border-radius: 1rem;
+            padding: 1.875rem;
+            display: flex;
+            flex-direction: column;
+            .scroll-area {
+                max-height: 18.75rem;
+                height: 18.75rem;
+                overflow-y: scroll;
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    gap: 1rem;
+                    li {
+                        display: flex;
+                        align-items: center;
+                        gap: 1rem;
+
+                        &:nth-child(even) {
+                            text-align: right;
+                            justify-content: flex-end;
+                            flex-direction: row-reverse;
+                            span {
+                                background-color: var(--crimson-400);
+                            }
+                        }
+
+                        span {
+                            background-color: var(--turquoise-400);
+                            width: 4rem;
+                            height: 4rem;
+                            border-radius: 50%;
+                            display: inline-flex;
+                            align-items: center;
+                            justify-content: center;
+                            @media (max-width: 48rem){
+                                width: 3rem;
+                                height: 3rem;
+                            }
+                        }
+                        div {
+                            flex: 1;
+                        }
+                    }
+                }
+            }
+            .chat-message {
+                display: flex;
+                margin-top: 1rem;
+                gap: 1rem;
+                input {
+                    border-radius: 0.625rem;
+                    flex: 1;
+                    padding: 1rem;
+                    border: 0.0625rem solid transparent;
+                    background-color: var(--base-100);
+                    &:hover {
+                        outline: none;
+                        background-color: white;
+                        border: 0.0625rem solid var(--base-100);
+                    }
+                    &:focus {
+                        outline: none;
+                        background-color: white;
+                        border: 0.0625rem solid var(--base-100);
+                    }
+                }
+                button {
+                    border: none;
+                    cursor: pointer;
                 }
             }
         }
